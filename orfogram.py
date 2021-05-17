@@ -72,7 +72,7 @@ for i in range(len(seq) -2):
 			if codon == 'TAA' or codon == 'TGA' or codon == 'TAG':
 				stop = j
 				break
-	if stop != None: lengths.append((stop - start)/3)
+	if stop != None: lengths.append((stop - start)//3)
 count = 0
 for n in lengths:
 	if n> arg.orfmin:
@@ -80,14 +80,18 @@ for n in lengths:
 print(count)
 
 
-lengths = [int(a) for a in lengths] #; all values are floating point. make integers
+#lengths = [int(a) for a in lengths] #; all values are floating point. make integers
 
 
 
 ##histogram
+histogram = [0] * (max(lengths) +1) 
+for x in lengths:
+	histogram[x]+=1
+print(histogram)
 
-for x in range(len(lengths)):
-	dup = 0
+"""
+dup = 0
 	for y in range(len(lengths)):
 		if lengths[x] == lengths[y]:
 			dup += 1
@@ -95,7 +99,7 @@ for x in range(len(lengths)):
 			y += 1
 	print(lengths[x], dup)
 print(lengths)
-
+"""
 ###Worked on with Victoria Rees
 
 
