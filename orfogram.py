@@ -96,5 +96,6 @@ for x in range(len(lengths)):
 	print(lengths[x], dup)
 print(lengths)
 
+###Worked on with Victoria Rees
 
 
