@@ -80,6 +80,7 @@ for name, seq in zip(name, proteins):
 
 
 
+# Collaborated with Victoria Rees
 
 
 """
